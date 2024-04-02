@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Domain
+namespace Domain.Enum
 {
     public enum TipoLog
     {
@@ -12,5 +12,8 @@ namespace Domain
 
         [Description("Tempo de Resposta")]
         TempoResosta = 3,
+
+        [Description("Metrica Livre")]
+        Livre = 4,
     }
 }

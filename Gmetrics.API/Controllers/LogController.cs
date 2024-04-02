@@ -1,5 +1,6 @@
 ﻿using Application.ViewModel;
 using Domain.Entities;
+using Domain.Enum;
 using Domain.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
@@ -33,7 +34,7 @@ namespace Gmetrics.API.Controllers
                 Tag = log.Tag,
                 Mensagem = log.Mensagem,
                 Criacao = log.Criacao,
-                TipoLog = (Domain.TipoLog)log.TipoLog,
+                TipoLog = (TipoLog)log.TipoLog,
                 IdProduto = log.IdProduto,
             };
 

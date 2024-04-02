@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Domain.Enum;
 using Domain.Repositories;
 using Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
@@ -28,7 +29,7 @@ namespace Infrastructure.Repositories
         {
             return await _context.Set<Log>()
                 .AsNoTracking()
-                .Where(x  => x.TipoLog == Domain.TipoLog.TempoResosta && x.IdProduto == idProduto)
+                .Where(x  => x.TipoLog == TipoLog.TempoResosta && x.IdProduto == idProduto)
                 .ToListAsync();
         }
 
